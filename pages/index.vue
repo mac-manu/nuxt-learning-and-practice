@@ -1,14 +1,10 @@
 <template>
-
-
-
-    <h1> home page </h1>
+    <h1> home </h1>
     <NuxtLink to="/">
         Home
-      </NuxtLink>
-
-      <NuxtLink to="/data">
+    </NuxtLink>
+    <NuxtLink to="/data">
         Data
-      </NuxtLink>
+    </NuxtLink>
 </template>
 
