@@ -10,6 +10,9 @@
         <NuxtLink to="/login">
             Login
         </NuxtLink>
+        <NuxtLink to="/registed">
+              registed
+          </NuxtLink>
       </div>
       <div v-else>
         <NuxtLink to="/protected">
