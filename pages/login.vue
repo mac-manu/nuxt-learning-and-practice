@@ -24,12 +24,12 @@ const credentials = reactive({
 })
 
 const login = async () => {
-    const { error } = await supaAuth.signUp(credentials)
+    const { error } = await supaAuth.signInWithPassword(credentials)
 
     if (error) {
         alert(error.message);
     } else {
-        return navigateTo('/');
+        return navigateTo('/protected');
     }
 }
 

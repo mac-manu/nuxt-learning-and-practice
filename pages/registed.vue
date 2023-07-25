@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Registed page</h1>
-        <form @submit.prevent="login">
+        <form @submit.prevent="registed">
             <input v-model="credentials.email" type="email" placeholder="Email" />
             <input v-model="credentials.password" type="password" placeholder="Password" />
             <button type="submit">Registed</button>
@@ -29,9 +29,7 @@ const registed = async () => {
     if (error) {
         alert(error.message);
     } else {
-        return navigateTo('/');
+        return navigateTo('/protected');
     }
 }
-
-
 </script>
