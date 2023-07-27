@@ -5,7 +5,7 @@
     <div class="save-btn">
         <button @click="showModal = true">Save</button>
     </div>
-    <SavedModal v-show="showModal" />
+    <SavedModal v-show="showModal" @close-modal="showModal = false" />
 </template>
 
 <script>

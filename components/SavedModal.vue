@@ -1,12 +1,15 @@
 <template>
-    <div class="modal-overlay">
-        <div class="modal">
+    <div class="modal-overlay" @click="$emit('close-modal')">
+        <div class="modal" @click.stop>
             <img class="check" src="~/assets/check-icon.png" alt="" />
             <h6>Saved!</h6>
             <p>Your Details have been saved Successfully</p>
             <button>Go Home</button>
+
+            <input v-model="text">
+
         </div>
-        <div class="close">
+        <div class="close" @click="$emit('close-modal')">
             <img class="close-img" src="~/assets/close-icon.svg" alt="" />
         </div>
     </div>
