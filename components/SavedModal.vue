@@ -6,7 +6,7 @@
             <p>Your Details have been saved Successfully</p>
             <button>Go Home</button>
 
-            <input v-model="text">
+
 
         </div>
         <div class="close" @click="$emit('close-modal')">
