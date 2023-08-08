@@ -2,43 +2,20 @@
     <div>
         <h1>protected page</h1>
 
-        <form @submit.prevent="addBook">
+        <input
+            name="title"
+            placeholder="Title"
+            v-model="book.title"
+            class="border-b pb-2 text-lg my-4 focus:outline-none w-full font-light text-gray-500 placeholder-gray-500 y-2"
+        />
+        <input
+                name="description"
+                placeholder="description"
+                v-model="book.description"
+                class="border-b pb-2 text-lg my-4 focus:outline-none w-full font-light text-gray-500 placeholder-gray-500 y-2"
+        />
 
-            <input v-model="title"
-            placeholder="Add book title"
-            />
-
-            <br>
-            <input v-model="description"
-            placeholder="Add book description"
-            />
-
-            <br>
-            <input v-model="price"
-            placeholder="Add book price"
-            />
-            <input v-model="author"
-            placeholder="Add book author"
-            />
-            <input v-model="available"
-            placeholder="Add book available"
-            />
-            <button on-submit="addBook">add book</button>
-
-        </form>
-
-
-        <br>
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
-
-
-
+        <button @click="saveBook">Save book</button>
 
 
         <button @click="logout">Logout</button>
@@ -50,6 +27,9 @@ definePageMeta({
     middleware: 'auth',
 })
 
+
+
+
 const supaAuth = useSupabaseAuthClient().auth
 
 const logout = async () => {
@@ -59,6 +39,5 @@ const logout = async () => {
     } else {
         return navigateTo('login');
     }
-
 };
 </script>
